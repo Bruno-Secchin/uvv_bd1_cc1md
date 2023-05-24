@@ -430,4 +430,9 @@
             ADD CONSTRAINT cc_estoques_quantidade
             CHECK( quantidade > 0 );
 
-
+        -- Constraint que impede que telefones iguais sejam adicionados:
+            ALTER TABLE lojas.clientes
+            ADD CONSTRAINT cc_clientes_telefone
+            CHECK( telefone1 <> telefone2 AND
+                   telefone2 <> telefone3 AND 
+                   telefone1 <> telefone3 );
