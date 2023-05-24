@@ -2,6 +2,10 @@
     Bruno Secchin Telles    CC1MD */
 
     /* Criando usuário com senha e atribuindo-lhe as devidas permissões. */
+        -- Deletando o banco de dados "uvv" e o usuário "bruno", caso já existam:
+            DROP DATABASE IF EXISTS uvv;
+            DROP USER IF EXISTS bruno;
+
         CREATE USER bruno 
         WITH 
         createdb 
@@ -22,9 +26,10 @@
             IS 'Banco de dados que contém os projetos realizados durante minha vida acadêmica.';
 
         -- Me conectando ao usuário e ao banco de dados criados.
+            \setenv PGPASSWORD 123ibitirui
             \c uvv bruno;
     /* Criando um esquema dentro do banco de dados. */
-        CREATE SCHEMA lojas
+        CREATE SCHEMA IF NOT EXISTS lojas
         AUTHORIZATION bruno;
 
         -- Inserindo comentário:
