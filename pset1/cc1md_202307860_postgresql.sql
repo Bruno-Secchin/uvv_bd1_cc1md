@@ -122,7 +122,7 @@
                 COMMENT ON COLUMN produtos.imagem_arquivo 
                 IS 'Apresenta o arquivo referente á imagem do produto.';
 
-                COMMENT ON COLUMN produtos.imagem_arquivo 
+                COMMENT ON COLUMN produtos.imagem_charset 
                 IS 'Apresenta o charset utilizado na imagem do produto.';
 
                 COMMENT ON COLUMN produtos.imagem_ultima_atualizacao 
